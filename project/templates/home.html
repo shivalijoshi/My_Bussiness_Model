@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+	{% block body_content %}
+		{% for post in posts %}
+			<h1>{{post.title}}</h1>
+			<p>
+				By {{post.user}} on {{post.date_posted}}
+				<br>
+				Price {{post.price}}<br>
+				Content {{post.content}}
+			</p>
+		{% endfor %}
+	{% endblock body_content %}
